@@ -43,6 +43,12 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-thymeleaf</artifactId>
       </dependency>
-  
+  		
+        <!-- starter-zipkin  链路追踪服务器 jar 除此之外还需要单独启动zipkin jar -->
+	    <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>  
+		 
   </dependencies>
 </project>
