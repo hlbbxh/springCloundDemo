@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <!-- 父工程 -->
+  <parent>
+    <groupId>com.hlbbxh</groupId>
+    <artifactId>springclound</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <!-- Feign 是什么呢？ Feign 是对 Ribbon的封装，使用注解的方式，调用起来更简单。。。 也是主流的方式~ -->
+  <artifactId>product-view-service-feign</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>product-view-service-feign</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <dependencies>
+  		<!-- eureka-client 客户端  -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        
+        <!-- spring-cloud-starter-openfeign，就是用来支持 Feign Feign Feign 方式的。 -->
+        <!-- Feign Feign Feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        
+        <!-- web模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+ 		
+ 		<!-- thymeleaf -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+      </dependency>
+  
+  </dependencies>
+</project>
