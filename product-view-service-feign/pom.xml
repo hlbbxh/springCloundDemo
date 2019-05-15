@@ -10,7 +10,6 @@
   </parent>
   <!-- Feign 是什么呢？ Feign 是对 Ribbon的封装，使用注解的方式，调用起来更简单。。。 也是主流的方式~ -->
   <artifactId>product-view-service-feign</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>product-view-service-feign</name>
   <url>http://maven.apache.org</url>
   
@@ -49,6 +48,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>  
-		 
+		
+  		<!--接下来我们把现成的 视图微服务-Feign 改造成配置客户端，使得其可以从配置服务器上获取版本信息。  -->
+  		<!-- 这个j依赖是 吧这个变成配置服务器  当然好向也是具有 原来的 eureka 功能  -->
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-config</artifactId>
+	    </dependency>   
+	    
   </dependencies>
 </project>
