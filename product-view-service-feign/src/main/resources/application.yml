@@ -1,9 +1,10 @@
 server:
   port: 8009
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8878/eureka/
+# 这个没什么变化，就是把 eureka 地址信息移动到了 bootstrap.yml 里
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8878/eureka/
 spring:
   application:
     name: product-view-service-feign
