@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled:  true
+        serviceId:  config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8878/eureka/
+
+# 作为配置客户端，比较。。。特别~ 它需要在 bootstrap.yml 里配置 config-server 的信息，而不是像以前那样在 application.yml 里进行配置。
+# bootstrap.yml 和 application.yml 的区别，简单说就是前者先启动，并且一些系统方面的配置需要在 bootstrap.yml 里进行配置
