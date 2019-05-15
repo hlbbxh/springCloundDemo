@@ -71,6 +71,7 @@
     <module>product-view-service-ribbon</module><!--视图渲染中心  -->
     <module>product-view-service-feign</module>
     <module>eureka-server</module>
+    <module>spring-cloud-config-server</module>
   </modules>
   
 </project>
