@@ -14,4 +14,5 @@ public class EurekaApplication {
 public static void main(String[] args) {
 		SpringApplication.run(EurekaApplication.class, args);
 	}
+	//服务中心 http://localhost:8878/
 }
