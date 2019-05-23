@@ -17,3 +17,16 @@ spring:
     mode: HTML5   
   zipkin:
     base-url: http://localhost:9411
+
+# 新增路径访问允许：  这样才能访问 /actuator/bus-refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"   
+
+# 配置断路器
+feign.hystrix.enabled: true   
