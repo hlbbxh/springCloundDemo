@@ -6,10 +6,20 @@ spring:
       discovery:
         enabled:  true
         serviceId:  config-server
+        #下面的配置是bug 消息总线的配置  支持 rabbitmq 的配置
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 39.105.36.48 
+    port: 5672
+    username: admin
+    password: admin
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8878/eureka/
 
 # 作为配置客户端，比较。。。特别~ 它需要在 bootstrap.yml 里配置 config-server 的信息，而不是像以前那样在 application.yml 里进行配置。
-# bootstrap.yml 和 application.yml 的区别，简单说就是前者先启动，并且一些系统方面的配置需要在 bootstrap.yml 里进行配置
+# bootstrap.yml 和 application.yml 的区别，简单说就是前者先启动，并且一些系统方面的配置需要在 bootstrap.yml 里进行配置 
