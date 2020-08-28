@@ -4,6 +4,7 @@ eureka:
   instance:
     hostname: localhost
   client:
+    # 自己要不要注册
     registerWithEureka: false
     fetchRegistry: false
     fetch-registry: false
