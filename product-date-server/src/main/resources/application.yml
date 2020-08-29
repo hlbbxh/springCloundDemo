@@ -11,3 +11,8 @@ eureka:
     serviceUrl:
     #服务注册中心的地址
       defaultZone: http://localhost:8878/eureka/
+  instance:
+    # host name 在eureka中配置的
+    hostname: product-data-service
+    # 为true就显示的是ip地址了 这里还需要调整一下 显示域名
+    prefer-ip-address: true

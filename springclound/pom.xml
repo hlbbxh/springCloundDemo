@@ -22,24 +22,33 @@
 	</properties>
 
 	<dependencies>
-		    <!-- 代表是一个spring boot 项目-->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter</artifactId>
-			</dependency>
-			<!-- test 模块   -->
-	      <dependency>
-	          <groupId>org.springframework.boot</groupId>
-	          <artifactId>spring-boot-starter-test</artifactId>
-	          <scope>test</scope>
-	      </dependency>
-	      <!-- 胡涂工具 jar  -->
-	      <dependency>
-	        <groupId>cn.hutool</groupId>
-	        <artifactId>hutool-all</artifactId>
-	        <version>4.3.1</version>
-	      </dependency>
-	      
+
+		<!-- 代表是一个spring boot 项目-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<!-- test 模块   -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!--mysql-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<!-- 胡涂工具 jar  -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -63,15 +72,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
-  <!-- 子包  -->
-  <modules>
-    <!-- 服务注册中心 -->
-    <module>product-date-server</module><!-- 数据处理中心 -->
-    <module>product-view-service-ribbon</module><!--视图渲染中心  -->
-    <module>product-view-service-feign</module>
-    <module>eureka-server</module>
-    <module>spring-cloud-config-server</module>
-  </modules>
+
+<!-- 子包  -->
+<!--  <modules>-->
+<!--    <module>product-date-server</module>&lt;!&ndash; 数据处理中心 &ndash;&gt;-->
+<!--    <module>product-view-service-ribbon</module>&lt;!&ndash;视图渲染中心  &ndash;&gt;-->
+<!--    <module>product-view-service-feign</module>-->
+<!--    <module>eureka-server</module>-->
+<!--    <module>spring-cloud-config-server</module>-->
+<!--  </modules>-->
   
 </project>
