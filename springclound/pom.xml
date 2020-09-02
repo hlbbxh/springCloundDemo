@@ -36,12 +36,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--mysql-->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
-
 		<!-- 胡涂工具 jar  -->
 		<dependency>
 			<groupId>cn.hutool</groupId>
