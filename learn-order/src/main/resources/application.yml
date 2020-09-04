@@ -22,8 +22,19 @@ eureka:
       # 注册中心的地址
       defaultZone: http://localhost:8878/eureka
   instance:
-    hostname: learn-order
+    # 这个 可以修改 注册中心的 host
+    hostname: localhost
 
 server:
   # 启动端口
   port: 5001
+
+# 自定义 服务器选取规则
+#NFLoadBalancerClassName: 配置ILoadBalancer的实现类
+#NFLoadBalancerRuleClassName: 配置IRule的实现类
+#NFLoadBalancerPingClassName: 配置IPing的实现类
+#NFWSServerListClassName: 配置ServerList的实现类
+#NIWSServerListFilterClassName: 配置ServerListFilter的实现类
+LEARN-PRODUCT:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

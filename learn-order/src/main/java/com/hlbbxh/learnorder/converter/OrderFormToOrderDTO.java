@@ -26,11 +26,11 @@ public class OrderFormToOrderDTO {
 
     /**
      * 转换数据 前台的数据 转换成 dto
-     *
+     * 注意 这里 static 的方法无法试试用 静态关键字
      * @param orderForm
      * @return
      */
-    public static OrderDTO convert(OrderForm orderForm) {
+    public OrderDTO convert(OrderForm orderForm) {
         Gson gson = new Gson();
 
         OrderDTO orderDTO = new OrderDTO();
@@ -43,11 +43,11 @@ public class OrderFormToOrderDTO {
 
         try {
             //转换 购物车 的程度json数据为 商品信息
-            gson.fromJson(orderForm.getItems(), new TypeToken<List<OrderDetail>>() {
+            orderDetailList = gson.fromJson(orderForm.getItems(), new TypeToken<List<OrderDetail>>() {
             }.getType());
         } catch (Exception e) {
             e.printStackTrace();
-//            logger.error("【json转换失败】,string={}",orderForm.getItems());
+            logger.error("【json转换失败】,string={}",orderForm.getItems());
             throw new OrderException(ResultEnum.PARAM_ERROR);
         }
         //购买的商品 列表

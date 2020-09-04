@@ -22,7 +22,8 @@ eureka:
       # 注册中心的地址
       defaultZone: http://localhost:8878/eureka
   instance:
-    hostname: learn-product
+    # 这个 可以修改 注册中心的 host
+    hostname: localhost
 
 server:
   # 启动端口

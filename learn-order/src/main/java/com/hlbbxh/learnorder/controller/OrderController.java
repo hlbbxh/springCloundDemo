@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -41,15 +42,16 @@ public class OrderController {
      * 3. 计算总价
      * 4. 扣库存(调用商品服务)
      * 5. 订单入库
-     *  写到这里了等着 测试
      */
+    @PostMapping("/createOrder")
     public ResultVo<Map<String, String>> createOrder(@Valid OrderForm orderForm, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             logger.error("【创建订单】参数不正确,orderForm={}",orderForm);
             throw new OrderException(ResultEnum.PARAM_ERROR);
         }
         //orderform 转换成orderdto
-        OrderDTO convertOrderDTO = OrderFormToOrderDTO.convert(orderForm);
+        OrderFormToOrderDTO orderFormToOrderDTO = new OrderFormToOrderDTO();
+        OrderDTO convertOrderDTO = orderFormToOrderDTO.convert(orderForm);
         //判断购物车 是不是空的
         if(CollectionUtil.isEmpty(convertOrderDTO.getOrderDetails())){
             logger.error("【创建订单】购物车为空");
