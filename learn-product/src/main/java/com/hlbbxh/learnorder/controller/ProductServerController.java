@@ -12,11 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020-09-0320:59:22
  */
 @RestController
-@RequestMapping("/ProductServer")
+@RequestMapping("/product")
 public class ProductServerController {
 
     @GetMapping("/getMsg")
     public String getMsg(){
         return "这是商品服务器";
     }
+
+
 }

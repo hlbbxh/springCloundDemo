@@ -1,4 +1,4 @@
-package com.hlbbxh.learnorder.controller.form;
+package com.hlbbxh.learnorder.form;
 
 import javax.validation.constraints.NotEmpty;
 

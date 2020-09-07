@@ -25,6 +25,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- feign 的使用  -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
+
         <!-- eureka-client 客户端  -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

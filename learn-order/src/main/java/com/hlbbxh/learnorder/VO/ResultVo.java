@@ -1,4 +1,4 @@
-package com.hlbbxh.learnorder.controller.VO;
+package com.hlbbxh.learnorder.VO;
 
 /**
  * @author Carrot

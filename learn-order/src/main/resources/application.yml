@@ -35,6 +35,8 @@ server:
 #NFLoadBalancerPingClassName: 配置IPing的实现类
 #NFWSServerListClassName: 配置ServerList的实现类
 #NIWSServerListFilterClassName: 配置ServerListFilter的实现类
+
+# 这是需要访问的引用名称
 LEARN-PRODUCT:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

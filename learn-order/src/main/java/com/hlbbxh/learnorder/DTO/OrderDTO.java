@@ -1,4 +1,4 @@
-package com.hlbbxh.learnorder.controller.DTO;
+package com.hlbbxh.learnorder.DTO;
 
 import com.hlbbxh.learnorder.entity.OrderDetail;
 

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -30,6 +31,15 @@ public class ProuductRepositoryTest extends TestCase {
     @Test
     public void test01(){
         List<ProductInfo> byProductStatus = prouductRepository.findByProductStatus(0);
+        System.out.println(byProductStatus.toString());
+    }
+
+    /**
+     * 测试按照  ProductId in操作查询 指定的商品信息
+     */
+    @Test
+    public void test02(){
+        List<ProductInfo> byProductStatus = prouductRepository.findByProductIdIn(Arrays.asList("157875196366160022","157875227953464068"));
         System.out.println(byProductStatus.toString());
     }
 }

@@ -1,5 +1,6 @@
 package com.hlbbxh.learnorder.controller;
 
+import com.hlbbxh.learnorder.DTO.CartDTO;
 import com.hlbbxh.learnorder.VO.ProductInfoVo;
 import com.hlbbxh.learnorder.VO.ProductVo;
 import com.hlbbxh.learnorder.VO.ResultVo;
@@ -9,9 +10,7 @@ import com.hlbbxh.learnorder.service.ProductCategoryService;
 import com.hlbbxh.learnorder.service.impl.ProductInfoServiceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,5 +75,25 @@ public class ProductController {
         }
         ResultVo resultVo = new ResultVo(productVoList);
         return resultVo;
+    }
+
+    /**
+     * 查询 指定商品 id的 商品  给订单服务 用的
+     * @param productidList
+     * @return
+     */
+    @PostMapping("/listOrderByProductIds")
+    public List<ProductInfo> listOrderByProductIds(@RequestBody List<String> productidList){
+        List<ProductInfo> productLists = productInfoService.findByProductids(productidList);
+        return productLists;
+    }
+
+    /**
+     * 扣库存的操作
+     * @param listCarts
+     */
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<CartDTO> listCarts){
+        productInfoService.decreaseStock(listCarts);
     }
 }

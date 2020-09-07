@@ -1,6 +1,6 @@
-package com.hlbbxh.learnorder.controller.service;
+package com.hlbbxh.learnorder.service;
 
-import com.hlbbxh.learnorder.controller.DTO.OrderDTO;
+import com.hlbbxh.learnorder.DTO.OrderDTO;
 
 /**
  * @author Carrot
