@@ -68,12 +68,12 @@
     </dependencyManagement>
 
 <!-- 子包  -->
-<!--  <modules>-->
-<!--    <module>product-date-server</module>&lt;!&ndash; 数据处理中心 &ndash;&gt;-->
-<!--    <module>product-view-service-ribbon</module>&lt;!&ndash;视图渲染中心  &ndash;&gt;-->
-<!--    <module>product-view-service-feign</module>-->
-<!--    <module>eureka-server</module>-->
-<!--    <module>spring-cloud-config-server</module>-->
-<!--  </modules>-->
+  <modules>
+    <module>../product-date-server</module><!-- 数据处理中心 -->
+    <module>../product-view-service-ribbon</module><!--视图渲染中心  -->
+    <module>../product-view-service-feign</module>
+    <module>../eureka-server</module>
+    <module>../spring-cloud-config-server</module>
+  </modules>
   
 </project>
